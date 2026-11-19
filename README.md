@@ -30,7 +30,7 @@ $$
 Nine groups respond to different vertical gaps between the ball and the paddle. Each group contains eight excitatory and two inhibitory neurons. Every 50 ms the decoder takes a vector $f$ containing nine filtered excitatory firing rates and a constant bias. It scores three actions with $W$ and samples a movement from their probabilities.
 
 $$
-P(a\mid f)=\operatorname{softmax}(Wf)_a
+P(a\mid f)=\frac{e^{(Wf)_a}}{\sum_b e^{(Wf)_b}}
 $$
 
 At the start, $W$ is zero and all three movements are equally likely. During training, a hit earns +1, a miss earns −1, and changes in alignment provide feedback between encounters. The critic compares the reward and its next value estimate with its previous prediction. That difference updates the decoder’s weights for recent spike patterns and actions.
