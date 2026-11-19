@@ -37,7 +37,7 @@ At the start, $W$ is zero and all three movements are equally likely. During tra
 
 ## Five notebooks
 
-Each notebook opens with saved plots on GitHub and runs independently from a fresh Python kernel. They share [one simulation file](notebooks/model.py).
+Each notebook includes its plots and runs independently from a fresh Python kernel. They share [one simulation file](notebooks/model.py). To read them in a browser, [open the rendered notebooks](https://nbviewer.org/github/iamnikhiliyer/spiking-pong/tree/main/notebooks/).
 
 | Notebook | Experiment |
 | --- | --- |
